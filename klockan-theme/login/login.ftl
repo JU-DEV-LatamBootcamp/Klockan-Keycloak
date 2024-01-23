@@ -43,7 +43,11 @@
                     </div>
 
                     <div class="${properties.kcFormGroupClass!} ${properties.kcFormSettingClass!}">
-                        <div id="kc-form-options">
+                      <div id="kc-form-buttons" class="${properties.kcFormGroupClass!}">
+                          <input type="hidden" id="id-hidden-input" name="credentialId" <#if auth.selectedCredential?has_content>value="${auth.selectedCredential}"</#if>/>
+                          <input tabindex="4" class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" name="login" id="kc-login" type="submit" value="${msg("doLogIn")}"/>
+                      </div>
+                       <div id="kc-form-options">
                             <#if realm.rememberMe && !usernameHidden??>
                                 <div class="checkbox">
                                     <label>
@@ -61,28 +65,16 @@
                                     <span><a tabindex="5" href="${url.loginResetCredentialsUrl}">${msg("doForgotPassword")}</a></span>
                                 </#if>
                             </div>
-
                       </div>
-
-                      <div id="kc-form-buttons" class="${properties.kcFormGroupClass!}">
-                          <input type="hidden" id="id-hidden-input" name="credentialId" <#if auth.selectedCredential?has_content>value="${auth.selectedCredential}"</#if>/>
-                          <input tabindex="4" class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" name="login" id="kc-login" type="submit" value="${msg("doLogIn")}"/>
-                      </div>
-                    <h6>Sign in with keycloak</h6>
                 </form>
             </#if>
+            <#elseif section = "info" >
+        
             </div>
+            
         </div>
         <script type="module" src="${url.resourcesPath}/js/passwordVisibility.js"></script>
-    <#elseif section = "info" >
-        <#if realm.password && realm.registrationAllowed && !registrationDisabled??>
-            <div id="kc-registration-container">
-                <div id="kc-registration">
-                    <span>${msg("noAccount")} <a tabindex="6"
-                                                 href="${url.registrationUrl}">${msg("doRegister")}</a></span>
-                </div>
-            </div>
-        </#if>
+    
     <#elseif section = "socialProviders" >
         <#if realm.password && social.providers??>
             <div id="kc-social-providers" class="${properties.kcFormSocialAccountSectionClass!}">

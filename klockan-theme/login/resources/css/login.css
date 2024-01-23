@@ -11,9 +11,8 @@
   }
   
   #kc-title-login{
-    margin:20px;
     font-style:bold;
-    
+    font-size: 24px; 
   }
   
   #username{
@@ -34,31 +33,68 @@
   #kc-form{
     align-content:center;
     margin-top:10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
-  
-  
+  #kc-form-buttons{
+    margin-bottom: 24px;
+  }
+  #kc-form-login{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  h2{
+    margin-left: 60px;
+    margin-top: 32px;
+  }
   
   #kc-form-wrapper{
     align-content:center;
     text-align:center;
+    border: 1px solid rgba(0, 0, 0, 0.10); 
+    border-radius: 8px;
+    width: 50%;
+    padding: 40px 0px ;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
   
   #kc-form-wrapper input{
     align-content:center;
-    margin:15px;
     height:35px;
-    border-radius:6px;
-    border: 1px solid #d9d0d0;
+    border-radius:4px;
+    border: 1px solid #79747E;
+    padding: 4px 16px;
   }
   
+  #kc-form-wrapper input:focus{
+    outline: none;
+    border: 1px solid #78549a;
+  }
+
+  #kc-form-wrapper input::placeholder{
+    color: #49454F;
+  }
+
+  a{
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 16px; 
+  }
   
+
   
   #kc-login{
-    font-familya:arial;
+    font-family: 'Roboto', sans-serif;
     width:170px;
     color:white;
-    background-color:#78549a;
+    background-color:#6750A4;
   }
   
   
