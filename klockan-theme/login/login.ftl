@@ -16,11 +16,7 @@
                                    aria-invalid="<#if messagesPerField.existsError('username','password')>true</#if>"
                             />
 
-                            <#if messagesPerField.existsError('username','password')>
-                                <span id="input-error" class="${properties.kcInputErrorMessageClass!}" aria-live="polite">
-                                        ${kcSanitize(messagesPerField.getFirstError('username','password'))?no_esc}
-                                </span>
-                            </#if>
+                            
 
                         </div>
                     </#if>
@@ -42,6 +38,11 @@
               
                     </div>
 
+                    <#if messagesPerField.existsError('username','password')>
+                        <span id="input-error" class="${properties.kcInputErrorMessageClass!}" aria-live="polite">
+                                ${kcSanitize(messagesPerField.getFirstError('username','password'))?no_esc}
+                        </span>
+                    </#if>
                     <div class="${properties.kcFormGroupClass!} ${properties.kcFormSettingClass!}">
                       <div id="kc-form-buttons" class="${properties.kcFormGroupClass!}">
                           <input type="hidden" id="id-hidden-input" name="credentialId" <#if auth.selectedCredential?has_content>value="${auth.selectedCredential}"</#if>/>

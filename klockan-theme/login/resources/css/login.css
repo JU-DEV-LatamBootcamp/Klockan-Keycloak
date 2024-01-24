@@ -18,6 +18,14 @@
   #username{
     margin-top:10px;
   }
+
+  #input-error{
+    color: red;
+  }
+
+  #kc-login{
+    cursor: pointer;
+  }
   
   *{
    font-family: Arial, Helvetica, sans-serif;
