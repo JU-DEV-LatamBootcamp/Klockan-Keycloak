@@ -718,7 +718,7 @@
       "name": "",
       "description": "",
       "rootUrl": "",
-      "adminUrl": "http://localhost:4200/",
+      "adminUrl": "https://localhost:4200/",
       "baseUrl": "",
       "surrogateAuthRequired": false,
       "enabled": true,
@@ -726,10 +726,10 @@
       "clientAuthenticatorType": "client-jwt",
       "secret": "**********",
       "redirectUris": [
-        "http://localhost:4200/*"
+        "https://localhost:4200/*"
       ],
       "webOrigins": [
-        "http://localhost:4200/*"
+        "https://localhost:4200/*"
       ],
       "notBefore": 0,
       "bearerOnly": false,
@@ -1542,14 +1542,14 @@
         "subComponents": {},
         "config": {
           "allowed-protocol-mapper-types": [
-            "oidc-usermodel-attribute-mapper",
-            "saml-user-property-mapper",
             "saml-user-attribute-mapper",
+            "oidc-usermodel-attribute-mapper",
+            "oidc-usermodel-property-mapper",
             "oidc-full-name-mapper",
             "oidc-address-mapper",
-            "oidc-sha256-pairwise-sub-mapper",
-            "oidc-usermodel-property-mapper",
-            "saml-role-list-mapper"
+            "saml-role-list-mapper",
+            "saml-user-property-mapper",
+            "oidc-sha256-pairwise-sub-mapper"
           ]
         }
       },
@@ -1593,13 +1593,13 @@
         "subComponents": {},
         "config": {
           "allowed-protocol-mapper-types": [
-            "saml-role-list-mapper",
             "oidc-usermodel-property-mapper",
-            "saml-user-property-mapper",
-            "oidc-sha256-pairwise-sub-mapper",
+            "oidc-full-name-mapper",
             "saml-user-attribute-mapper",
             "oidc-usermodel-attribute-mapper",
-            "oidc-full-name-mapper",
+            "saml-user-property-mapper",
+            "oidc-sha256-pairwise-sub-mapper",
+            "saml-role-list-mapper",
             "oidc-address-mapper"
           ]
         }
