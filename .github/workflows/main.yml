@@ -15,7 +15,7 @@ jobs:
             DOCKER_PASSWORD: ${{secrets.DOCKER_HUB_PASSWORD}}
         run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
       - name: Build the Docker image
-        run: docker-compose build
+        run:  docker-compose up
       - name: List docker image
         run: docker image ls 
       - name: Tagin back
