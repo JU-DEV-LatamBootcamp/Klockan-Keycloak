@@ -718,7 +718,7 @@
       "name": "",
       "description": "",
       "rootUrl": "",
-      "adminUrl": "https://localhost:4200/",
+      "adminUrl": "https://localhost/",
       "baseUrl": "",
       "surrogateAuthRequired": false,
       "enabled": true,
@@ -726,10 +726,10 @@
       "clientAuthenticatorType": "client-jwt",
       "secret": "**********",
       "redirectUris": [
-        "https://localhost:4200/*"
+        "https://localhost/*"
       ],
       "webOrigins": [
-        "https://localhost:4200/*"
+        "https://localhost/*"
       ],
       "notBefore": 0,
       "bearerOnly": false,
