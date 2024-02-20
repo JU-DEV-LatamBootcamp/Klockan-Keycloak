@@ -5,7 +5,7 @@ services:
     container_name: keycloak-container
     image: quay.io/keycloak/keycloak:23.0.4
     ports:
-      - "8080:8080"
+      - '8443:8443'
     environment:
       - KEYCLOAK_ADMIN=admin
       - KEYCLOAK_ADMIN_PASSWORD=admin
@@ -13,7 +13,8 @@ services:
     volumes:
       - ./config/:/opt/keycloak/data/import
       - ./klockan-theme/:/opt/keycloak/themes/klockan-theme
-    entrypoint: '/opt/keycloak/bin/kc.sh start-dev --import-realm'
+      - ./certs/:/opt/keycloak/certs/
+    entrypoint: '/opt/keycloak/bin/kc.sh start-dev --https-port=8443 --https-certificate-file=/opt/keycloak/certs/keycloak-server.crt.pem --https-certificate-key-file=/opt/keycloak/certs/keycloak-server.key.pem --import-realm -- verbose'
     networks:
       - klockan-network
 
