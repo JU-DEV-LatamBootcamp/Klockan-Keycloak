@@ -432,7 +432,28 @@
       ]
     }
   },
-  "groups": [],
+  "groups": [
+    {
+      "id": "0a60c3e0-aa70-49ff-aae5-9c400593e7db",
+      "name": "admin",
+      "path": "/admin",
+      "clientRoles": {
+        "frontend": [
+          "admin"
+        ]
+      }
+    },
+    {
+      "id": "f9abd3c3-8ea5-4d7c-9656-19ff2a5cebd2",
+      "name": "trainer",
+      "path": "/trainer",
+      "clientRoles": {
+        "frontend": [
+          "trainer"
+        ]
+      }
+    }
+  ],
   "defaultRole": {
     "id": "233eb969-564d-457e-b239-defa95c9baa4",
     "name": "default-roles-atendance_app",
@@ -1516,14 +1537,14 @@
         "subComponents": {},
         "config": {
           "allowed-protocol-mapper-types": [
-            "oidc-address-mapper",
             "oidc-usermodel-property-mapper",
-            "oidc-full-name-mapper",
-            "saml-user-attribute-mapper",
             "saml-role-list-mapper",
-            "oidc-sha256-pairwise-sub-mapper",
             "saml-user-property-mapper",
-            "oidc-usermodel-attribute-mapper"
+            "oidc-usermodel-attribute-mapper",
+            "oidc-full-name-mapper",
+            "oidc-sha256-pairwise-sub-mapper",
+            "oidc-address-mapper",
+            "saml-user-attribute-mapper"
           ]
         }
       },
@@ -1567,13 +1588,13 @@
         "subComponents": {},
         "config": {
           "allowed-protocol-mapper-types": [
+            "oidc-full-name-mapper",
             "oidc-usermodel-attribute-mapper",
             "oidc-address-mapper",
-            "oidc-sha256-pairwise-sub-mapper",
-            "oidc-usermodel-property-mapper",
             "saml-user-attribute-mapper",
             "saml-role-list-mapper",
-            "oidc-full-name-mapper",
+            "oidc-usermodel-property-mapper",
+            "oidc-sha256-pairwise-sub-mapper",
             "saml-user-property-mapper"
           ]
         }
