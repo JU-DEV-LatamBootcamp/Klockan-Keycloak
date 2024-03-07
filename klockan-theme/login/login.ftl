@@ -10,7 +10,7 @@
                 <div id="kc-logo">
                     <img src="${url.resourcesPath}/svg/klockan-logo.svg" alt="Klockan Logo" id="kc-logo-img" />
                 </div>
-              <div id="kc-title-login">Login</div>
+                <div id="kc-title">Login</div>
                 <form id="kc-form-login" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
                     <#if !usernameHidden??>
                         <div class="${properties.kcFormGroupClass!}">
