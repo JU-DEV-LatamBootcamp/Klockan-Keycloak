@@ -2,107 +2,113 @@
    This clashes with the "keycloak-bg.png' background defined on the body below.
    Therefore the Patternfly background must be set to none. */
 
-   textarea.pf-c-form-control {
-    height: auto;
-  }
-  
-  #kc-header-wrapper{
-    display:none;
-  }
-  
-  #kc-title-login{
-    font-style:bold;
-    font-size: 24px; 
-  }
-  
-  #username{
-    margin-top:10px;
-  }
+textarea.pf-c-form-control {
+  height: auto;
+}
 
-  #input-error{
-    color: red;
-  }
+#kc-header-wrapper {
+  display: none;
+  padding: 2rem;
+}
 
-  #kc-login{
-    cursor: pointer;
-  }
-  
-  *{
-   font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  
-  #kc-title-login{
-    
-    text-align:center;
-  }
-  
-  
-  #kc-form{
-    align-content:center;
-    margin-top:10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #kc-form-buttons{
-    margin-bottom: 24px;
-  }
-  #kc-form-login{
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
+#kc-title-login {
+  font-style: bold;
+  font-size: 24px;
+}
 
-  h2{
-    margin-left: 60px;
-    margin-top: 32px;
-  }
-  
-  #kc-form-wrapper{
-    align-content:center;
-    text-align:center;
-    border: 1px solid rgba(0, 0, 0, 0.10); 
-    border-radius: 8px;
-    width: 50%;
-    padding: 40px 0px ;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  #kc-form-wrapper input{
-    align-content:center;
-    height:35px;
-    border-radius:4px;
-    border: 1px solid #79747E;
-    padding: 4px 16px;
-  }
-  
-  #kc-form-wrapper input:focus{
-    outline: none;
-    border: 1px solid #78549a;
-  }
+#username {
+  margin-top: 10px;
+}
 
-  #kc-form-wrapper input::placeholder{
-    color: #49454F;
-  }
+#input-error {
+  color: red;
+}
 
-  a{
-    font-family: 'Nunito', sans-serif;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-size: 16px; 
-  }
-  
+#kc-login {
+  cursor: pointer;
+}
 
-  
-  #kc-login{
-    font-family: 'Roboto', sans-serif;
-    width:170px;
-    color:white;
-    background-color:#6750A4;
-  }
-  
-  
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#kc-title-login {
+  text-align: center;
+}
+
+#kc-form {
+  align-content: center;
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#kc-form-buttons {
+  margin-bottom: 24px;
+}
+
+#kc-form-login {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+#kc-form-wrapper {
+  align-content: center;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#kc-form-wrapper input {
+  align-content: center;
+  height: 35px;
+  border-radius: 4px;
+  border: 1px solid #79747e;
+  padding: 4px 16px;
+  width: 320px;
+}
+
+#kc-form-wrapper input:focus {
+  outline: none;
+  border: 1px solid #78549a;
+}
+
+#kc-form-wrapper input::placeholder {
+  color: #49454f;
+}
+
+a {
+  font-family: 'Nunito', sans-serif;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+}
+
+#kc-button {
+  background-color: #6210cc;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  width: 354px !important;
+  height: 40px !important;
+  color: white;
+  padding: 4px 16px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+#kc-button:hover {
+  background-color: #7a29e6;
+}
+#kc-logo {
+  margin-top: 16px;
+}
+
+#kc-logo-img {
+  width: 150px;
+}
