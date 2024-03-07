@@ -4,20 +4,19 @@
 
   <#if section = "header">
     <#elseif section = "form">
-        <h2>Klockan</h2>
         <div id="kc-form">
           <div id="kc-form-wrapper">
             <#if realm.password>
-              <div id="kc-title-login">Login</div>
+                <div id="kc-logo">
+                    <img src="${url.resourcesPath}/svg/klockan-logo.svg" alt="Klockan Logo" id="kc-logo-img" />
+                </div>
+                <div id="kc-title">Login</div>
                 <form id="kc-form-login" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
                     <#if !usernameHidden??>
                         <div class="${properties.kcFormGroupClass!}">
                             <input tabindex="1" id="username" class="${properties.kcInputClass!}" placeholder="Email" name="username" value="${(login.username!'')}"  type="text" autofocus autocomplete="off"
                                    aria-invalid="<#if messagesPerField.existsError('username','password')>true</#if>"
                             />
-
-                            
-
                         </div>
                     </#if>
 
@@ -27,9 +26,6 @@
                                    aria-invalid="<#if messagesPerField.existsError('username','password')>true</#if>"
                             />
                         </div>
-
-
-                   
                         <#if usernameHidden?? && messagesPerField.existsError('username','password')>
                             <span id="input-error" class="${properties.kcInputErrorMessageClass!}" aria-live="polite">
                                     ${kcSanitize(messagesPerField.getFirstError('username','password'))?no_esc}
@@ -46,7 +42,7 @@
                     <div class="${properties.kcFormGroupClass!} ${properties.kcFormSettingClass!}">
                       <div id="kc-form-buttons" class="${properties.kcFormGroupClass!}">
                           <input type="hidden" id="id-hidden-input" name="credentialId" <#if auth.selectedCredential?has_content>value="${auth.selectedCredential}"</#if>/>
-                          <input tabindex="4" class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" name="login" id="kc-login" type="submit" value="${msg("doLogIn")}"/>
+                          <input tabindex="4" class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" name="login" id="kc-button" type="submit" value="${msg("doLogIn")}"/>
                       </div>
                        <div id="kc-form-options">
                             <#if realm.rememberMe && !usernameHidden??>
